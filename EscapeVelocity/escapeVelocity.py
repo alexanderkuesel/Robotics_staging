@@ -23,5 +23,5 @@ hourly_step = 6 ##only change if your results are seemingly limited by the 20 ru
 
 ##Execution Space
 print()
-#OC_B.crawler(mission_name, start_time)
+OC_B.crawler(mission_name, start_time)
 OC_B.jpg_extract(current_dir, 'jpgOutput')
