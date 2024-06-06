@@ -1,0 +1,9 @@
+{
+    "User_input": {
+      "mission_name": "OC23 - BCD Levels", 
+      "start_time": "2024-06-04T12:00:00.00",
+      "end_time": "datetime.now()", 
+      "hourly_step": "6" 
+    }
+  }
+    
