@@ -8,9 +8,8 @@ Escape Velocity (the minimum speed needed for a body (or set of files) to pull a
 
 ## How to
 1. Install all files in a common directory, keeping their original structure
-2. Start by opening the escapeVelocity.py
-3. Only change whats in the "User input space"
-4. 
+2. Start by opening main.py
+3. Use the preferences.json file to edit mission name, start time, end time and hourly step
 
 
 ### To do

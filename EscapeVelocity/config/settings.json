@@ -35,12 +35,6 @@
       "url": "https://scoutsitehub-oc.intel.com/api/v0/",
       "token": "190479fe-f24d-459f-9034-bf2e555d9419",
       "campus": "OC"
-    },
-    "User_input": {
-      "mission_name": "OC23 - BCD Levels", 
-      "start_time": "2024-05-27T12:00:00.00",
-      "end_time": "datetime.now()", 
-      "hourly_step": "6" 
     }
   }
     
