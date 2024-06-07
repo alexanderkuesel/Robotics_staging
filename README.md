@@ -22,8 +22,9 @@ Escape Velocity (the minimum speed needed for a body (or set of files) to pull a
 
 ## To do
 - OOP the target server selection....
-- Make server configurable from user settings
+- Clear out the empty folders created by the extract
 - Add CA cert authentication instead of hard-code token
-- Make preferences.json templatable
+- Make preferences.json templates
 - Make a better filter (filter by action, filetype, etc). Add an anti-filter (discards anything containing (for example ptz))
+- Add git ignore
 
