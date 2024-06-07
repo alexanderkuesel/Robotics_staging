@@ -1,10 +1,11 @@
 {
     "User_input": {
-      "mission_name": "OC20 - BCP SHW Trim PMP VFD", 
-      "start_time": "2024-06-05T12:00:00.00",
-      "end_time": "datetime.now()", 
-      "hourly_step": "6",
-      "filter": ""
+        "target_server":"OC_A",
+        "mission_name": "OC20 - BCP SHW Trim PMP VFD", 
+        "start_time": "2024-06-05T12:00:00.00",
+        "end_time": "datetime.now()", 
+        "hourly_step": "6",
+        "filter": ""
     }
   }
     

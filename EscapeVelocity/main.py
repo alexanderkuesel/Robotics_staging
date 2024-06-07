@@ -23,15 +23,27 @@ OC_B = targetOrbit(**config['OC_B'])
 OC_SCOUT = targetOrbit(**config['OC_SCOUT'])
 
 ##Get user preferences from json
+target_server = pref['User_input']['target_server']
 mission_name = pref['User_input']['mission_name']
 start_time = pref['User_input']['start_time']
 end_time = pref['User_input']['end_time']
 hourly_step = pref['User_input']['hourly_step']
 filter = pref['User_input']['filter']
 
-##Execution Space
-print(f'Gathering all zip files for: {mission_name} in range {start_time} to {end_time}')
-OC_A.crawler(mission_name, start_time) ##end time is broken
-
-print(f'Extracting jpgs from {current_dir}')
-OC_A.jpg_extract(current_dir, filter,'jpgOutput')
+##HATE this way of doing it, not modular at all
+match target_server:
+    case 'OC_A':
+        print(f'Gathering all zip files from {target_server} for: {mission_name} in range {start_time} to {end_time}')
+        OC_A.crawler(mission_name, start_time)
+        print(f'Extracting jpgs from {current_dir}')
+        OC_A.jpg_extract(current_dir, filter,'jpgOutput')
+    case 'OC_B':
+        print(f'Gathering all zip files from {target_server} for: {mission_name} in range {start_time} to {end_time}')
+        OC_B.crawler(mission_name, start_time)
+        print(f'Extracting jpgs from {current_dir}')
+        OC_B.jpg_extract(current_dir, filter,'jpgOutput')
+    case 'OC_SCOUT':
+        print(f'Gathering all zip files from {target_server} for: {mission_name} in range {start_time} to {end_time}')
+        OC_SCOUT.crawler(mission_name, start_time)
+        print(f'Extracting jpgs from {current_dir}')
+        OC_SCOUT.jpg_extract(current_dir, filter,'jpgOutput')
