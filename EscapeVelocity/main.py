@@ -27,11 +27,11 @@ mission_name = pref['User_input']['mission_name']
 start_time = pref['User_input']['start_time']
 end_time = pref['User_input']['end_time']
 hourly_step = pref['User_input']['hourly_step']
-
+filter = pref['User_input']['filter']
 
 ##Execution Space
 print(f'Gathering all zip files for: {mission_name} in range {start_time} to {end_time}')
-OC_B.crawler(mission_name, start_time)
+OC_A.crawler(mission_name, start_time) ##end time is broken
 
 print(f'Extracting jpgs from {current_dir}')
-OC_B.jpg_extract(current_dir, 'jpgOutput')
+OC_A.jpg_extract(current_dir, filter,'jpgOutput')

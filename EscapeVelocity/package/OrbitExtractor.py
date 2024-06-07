@@ -119,7 +119,7 @@ class targetOrbit ():
         print(len(runIDList))
             #self.get_run_zip(runID[i])
 
-    def jpg_extract(self, dir, outputFolder = 'output'):
+    def jpg_extract(self, dir, filter, outputFolder = 'output'):
         """Extract images from zip files and outputs to specified filename
 
         Args:
@@ -143,16 +143,17 @@ class targetOrbit ():
                                 newName = match.group()
                                 # Check if the file is a JPG
                                 if file.lower().endswith(".jpg"):
-                                    # Construct the new file name with the datetime appended
-                                    file_basename = os.path.basename(file)  # Get the base name of the file
-                                    new_file_name = f"{file_basename}_{newName}.jpg"  # Append datetime to the base name
-                                    # Extract the file to a temporary path
-                                    extracted_path = zip_ref.extract(file, output_dir)
-                                    # Construct the new file path in the output directory
-                                    new_file_path = os.path.join(output_dir, new_file_name)
-                                    # Rename and move the extracted file to the new path
-                                    os.rename(extracted_path, new_file_path)
-                                    print(f"Extracted and renamed {file} to {new_file_path}")
+                                    if filter in file:
+                                        # Construct the new file name with the datetime appended
+                                        file_basename = os.path.basename(file)  # Get the base name of the file
+                                        new_file_name = f"{file_basename}_{newName}.jpg"  # Append datetime to the base name
+                                        # Extract the file to a temporary path
+                                        extracted_path = zip_ref.extract(file, output_dir)
+                                        # Construct the new file path in the output directory
+                                        new_file_path = os.path.join(output_dir, new_file_name)
+                                        # Rename and move the extracted file to the new path
+                                        os.rename(extracted_path, new_file_path)
+                                        print(f"Extracted and renamed {file} to {new_file_path}")
 
 
 
