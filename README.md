@@ -9,11 +9,19 @@ Escape Velocity (the minimum speed needed for a body (or set of files) to pull a
 ## How to
 1. Install all files in a common directory, keeping their original structure
 2. Start by opening main.py
-3. Use the preferences.json file to edit mission name, start time, end time and hourly step
+3. Use the preferences.json file to edit mission name, start time, end time, filter and hourly step
+   **{All JSON parameters must be strings in double quotes}**
+    - **mission_name**: Go to Orbit Server and copy exactly as it shows in the UI. Default: "OC23 - BCD Levels"
+    - **start_time**: Must be in isostring format. Default "2024-06-05T12:00:00.00"
+    - **end_time**: Must be in isostring format. Default "datetime.now()" *hard-coded at the moment*
+    - **hourly_step**: Hourly range to run. Only change if you see more than 20 missions are being returned. Must be int. Default = 6
+    - **filter**: catch-all filter that can be used to only save images with certain string. Must be string. Recommend it to be long to actually work. Default = "" (allow all)
+4. I would recommend clearing out the zipFiles and output folders after use as it might try to go through those files and return spurious results
 
 
-### To do
+## To do
+- Make server configurable from user settings
 - Add CA cert authentication instead of hard-code token
-- Add more user friendly input method
-- Extend settings.json to include all user input
+- Make preferences.json templatable
+- Make a better filter (filter by action, filetype, etc). Add an anti-filter (discards anything containing (for example ptz))
 
