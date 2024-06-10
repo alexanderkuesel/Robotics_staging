@@ -34,16 +34,17 @@ filter = pref['User_input']['filter']
 match target_server:
     case 'OC_A':
         print(f'Gathering all zip files from {target_server} for: {mission_name} in range {start_time} to {end_time}')
-        OC_A.crawler(mission_name, start_time)
+        OC_A.crawler(mission_name, start_time, datetime.now(), 24)
         print(f'Extracting jpgs from {current_dir}')
         OC_A.jpg_extract(current_dir, filter,'jpgOutput')
     case 'OC_B':
         print(f'Gathering all zip files from {target_server} for: {mission_name} in range {start_time} to {end_time}')
-        OC_B.crawler(mission_name, start_time)
+        OC_B.crawler(mission_name, start_time, datetime.now(), 24)
         print(f'Extracting jpgs from {current_dir}')
         OC_B.jpg_extract(current_dir, filter,'jpgOutput')
     case 'OC_SCOUT':
         print(f'Gathering all zip files from {target_server} for: {mission_name} in range {start_time} to {end_time}')
-        OC_SCOUT.crawler(mission_name, start_time)
+        OC_SCOUT.crawler(mission_name, start_time, datetime.now(), 24)
         print(f'Extracting jpgs from {current_dir}')
         OC_SCOUT.jpg_extract(current_dir, filter,'jpgOutput')
+

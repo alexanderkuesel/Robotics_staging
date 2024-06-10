@@ -12,7 +12,7 @@ urllib3.disable_warnings() ##insecure but need to ignore
 ##Directory that will contain zip files
 outputDir = os.path.dirname(os.path.abspath(__file__))
 
-class targetOrbit (): 
+class targetOrbit(): 
 
     def __init__(self, server_name, description, robot_list, url, token, campus):
         """init function that holds server attributes which makes it easier to call later
@@ -154,6 +154,5 @@ class targetOrbit ():
                                         # Rename and move the extracted file to the new path
                                         os.rename(extracted_path, new_file_path)
                                         print(f"Extracted and renamed {file} to {new_file_path}")
-
 
 
