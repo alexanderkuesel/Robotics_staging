@@ -20,12 +20,12 @@ Escape Velocity (the minimum speed needed for a body (or set of files) to pull a
 5. Run the main.py (make sure you saved the preferences.json before running)
 
 
-## To do
-- OOP the target server selection....sub-class
+## To do (development)
+- OOP the target server selection....sub-class or dictionary
 - Clear out the empty folders created by the extract
 - Add CA cert authentication instead of hard-code token
 - Make preferences.json templates
 - Make a better filter (filter by action, filetype, etc). Add an anti-filter (discards anything containing (for example ptz))
-
+- Integrate azcopy
 
 

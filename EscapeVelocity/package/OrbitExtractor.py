@@ -126,7 +126,7 @@ class targetOrbit():
             dir (string): Directory containing zip files
         """
         regexDT = r'\d{4}-\d{2}-\d{2}T\d{2}-\d{2}-\d{2}'
-        output_dir = os.path.join(dir, outputFolder)  # Replace with the path to your desired output directory
+        output_dir = os.path.join(dir, outputFolder)  # output Folder
 
         for subdir, dirs, files in os.walk(dir):
             for filename in files:
@@ -143,7 +143,7 @@ class targetOrbit():
                                 newName = match.group()
                                 # Check if the file is a JPG
                                 if file.lower().endswith(".jpg"):
-                                    if filter in file:
+                                    if filter in file: #applies positive filter to search to only return files with filter in name
                                         # Construct the new file name with the datetime appended
                                         file_basename = os.path.basename(file)  # Get the base name of the file
                                         new_file_name = f"{file_basename}_{newName}.jpg"  # Append datetime to the base name
