@@ -17,12 +17,15 @@ Escape Velocity (the minimum speed needed for a body (or set of files) to pull a
     - **hourly_step**: Hourly range to run. Only change if you see more than 20 missions are being returned. Must be int. Default = 6
     - **filter**: catch-all filter that can be used to only save images with certain string. Must be string. Recommend it to be long to actually work. Default = "" (allow all)
 4. I would recommend clearing out the zipFiles and output folders after use as it might try to go through those files and return spurious results
+5. Run the main.py (make sure you saved the preferences.json before running)
 
 
-## To do
-- OOP the target server selection....
-- Make server configurable from user settings
+## To do (development)
+- OOP the target server selection....sub-class or dictionary
+- Clear out the empty folders created by the extract
 - Add CA cert authentication instead of hard-code token
-- Make preferences.json templatable
+- Make preferences.json templates
 - Make a better filter (filter by action, filetype, etc). Add an anti-filter (discards anything containing (for example ptz))
+- Integrate azcopy
+
 
