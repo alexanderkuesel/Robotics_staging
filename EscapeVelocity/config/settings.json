@@ -8,7 +8,6 @@
         "spot-BD-33550002"
       ],
       "url": "https://orbitoca.intel.com/api/v0/",
-      "token": "ef3d714f-a994-4171-a894-92a6db19bc61",
       "campus": "OC"
     },
     "OC_B": {
@@ -21,19 +20,6 @@
         "spot-BD-33400012"
       ],
       "url": "https://orbitocb.intel.com/api/v0/",
-      "token": "957e9c49-d3ce-4870-ac76-bb3cf513b93d",
-      "campus": "OC"
-    },
-    "OC_SCOUT": {
-      "server_name": "Old SCOUT",
-      "description": "SCOUT server containing OG robots, EOL'd",
-      "robot_list": [
-        "10.87.135.204",
-        "10.87.135.226",
-        "spot-BD-33550002"
-      ],
-      "url": "https://scoutsitehub-oc.intel.com/api/v0/",
-      "token": "190479fe-f24d-459f-9034-bf2e555d9419",
       "campus": "OC"
     }
   }

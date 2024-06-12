@@ -14,7 +14,7 @@ outputDir = os.path.dirname(os.path.abspath(__file__))
 
 class targetOrbit(): 
 
-    def __init__(self, server_name, description, robot_list, url, token, campus):
+    def __init__(self, server_name, description, robot_list, url, campus, token):
         """init function that holds server attributes which makes it easier to call later
 
         Args:
@@ -22,15 +22,14 @@ class targetOrbit():
             description (str): Description
             robot_list (tuple): Hostname of contained robots
             url (str): API url
-            token (str): OAuth2.0 token
             campus (str): Campus Code
         """
         self.server_name = server_name
         self.description = description
         self.robot_list = robot_list
         self.url = url
-        self.token = token
         self.campus = campus
+        self.token = token
 
     ##gets runs and return dictionary-> Mission Name: UUID
     def get_runs(self, start_date, end_date, missionName):
