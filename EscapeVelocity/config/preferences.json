@@ -1,7 +1,7 @@
 {
     "User_input": {
-        "target_server":"OC_A",
-        "mission_name": "OC20 - BCP SHW Trim PMP VFD", 
+        "target_server":"OC_B",
+        "mission_name": "OC23 - BCD Levels", 
         "start_time": "2024-06-05T12:00:00.00",
         "end_time": "datetime.now()", 
         "hourly_step": "12",
